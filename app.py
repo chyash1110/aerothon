@@ -13,7 +13,6 @@ from geographiclib.geodesic import Geodesic
 
 app = Flask(__name__)
 
-# Cache and retry setup for weather API requests
 cache_session = requests_cache.CachedSession('.cache', expire_after=3600)
 retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
 openmeteo = openmeteo_requests.Client(session=retry_session)
