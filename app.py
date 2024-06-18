@@ -30,16 +30,13 @@ def source_destination_form():
 def flying_safety_checker():
     return render_template('flying_safety_checker.html')
 
-# Load the pre-trained model
-model = joblib.load('D:\GEU\Aerorthon\FinalApp\RandomForest.joblib')
+model = joblib.load('RandomForest.joblib')
 
-# Preprocess input data
 def preprocess_data(data):
     scaler = StandardScaler()
     scaled_data = scaler.fit_transform(data)
     return scaled_data
 
-# Predict safety based on weather data
 def predict_safety(weather_data):
     scaled_data = preprocess_data(weather_data)
     prediction = model.predict(scaled_data)
