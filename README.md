@@ -1,4 +1,4 @@
-# Aerothon
+# FlightOps
 
 This is a module developed for airbus aerothon 6.0(2024), hackathon conducted by Airbus. The application allows users to input source and destination airports and provides a route safety analysis based on current weather conditions. 
 
