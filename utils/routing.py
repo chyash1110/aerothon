@@ -6,7 +6,7 @@ def calculate_shortest_route(graph, source, destination):
 
 def create_graph():
     graph = nx.Graph()
-    with open('D:/GEU/Aerorthon/FinalApp/airports.csv', newline='') as csvfile:
+    with open('airports.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             graph.add_node(row['Name'], latitude=float(row['Latitude']), longitude=float(row['Longitude']))
