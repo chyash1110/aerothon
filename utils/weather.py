@@ -34,7 +34,7 @@ def extract_weather_features(weather_data, lat, lon):
     }
     return features
 
-model = joblib.load('D:\GEU\Aerorthon\FinalApp\RandomForest.joblib')
+model = joblib.load('RandomForest.joblib')
 
 def predict_weather_safety(features):
     features_df = pd.DataFrame([features])
